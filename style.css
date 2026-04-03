@@ -1,0 +1,110 @@
+/* Reseta margens e define uma fonte bonita e limpa */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Centraliza a calculadora no meio da tela */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+/* Corpo da calculadora */
+.calculator {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    padding: 24px;
+}
+
+/* Visor onde aparecem os números */
+.display {
+    background-color: #f8f9fa;
+    color: #333333;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    word-wrap: normal;
+    white-space: nowrap;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Organização dos botões em 4 colunas */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Estilo padrão dos botões */
+.btn {
+    border: none;
+    background-color: #e9ecef;
+    color: #333333;
+    font-size: 1.2rem;
+    padding: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+.btn:hover {
+    background-color: #ced4da;
+}
+
+/* Efeito ao clicar */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Botões de operação (+, -, etc) */
+.operator {
+    background-color: #ffe8cc;
+    color: #e8590c;
+    font-weight: 600;
+}
+
+.operator:hover {
+    background-color: #ffd8a8;
+}
+
+/* Botões AC e DEL */
+.action {
+    background-color: #ffe3e3;
+    color: #c92a2a;
+    font-weight: 600;
+}
+
+.action:hover {
+    background-color: #ffc9c9;
+}
+
+/* Botão de Igual (=) */
+.equal {
+    background-color: #3bc9db;
+    color: white;
+    font-weight: bold;
+}
+
+.equal:hover {
+    background-color: #22b8cf;
+}
+
+/* Faz o botão do número 0 ocupar duas colunas */
+.zero {
+    grid-column: span 2;
+}
